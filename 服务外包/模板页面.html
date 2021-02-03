@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能租赁平台</title>
+    <link rel="stylesheet" href=".\css\模板页面样式.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="whole">
+        <!--头部一条-->
+        <div class="header">
+            <div class="flex-wrap content">
+                <div class="flex-wrap header-left">
+                    <div class="City_Select_Btn2 city-choose">
+                        <span id="city-input" class="text">
+                            <span class="icon-city-trig"></span>
+                            (address.city).replace('市','')
+                        </span>
+                    </div>
+                    <div class="flex-con">您好！欢迎来到智能租赁平台</div>
+                    <div class="header-line"></div>
+                </div>
+                <div class="flex-con header-mid">
+                    <a href="#" v-if="login" target="_blank" class="link-item">userData.center_link.label</a>
+                    <a href="/customer-help/process" target="_blank" class="link-item">帮助中心</a>
+                    <div class="header-line"></div>
+                    <div class="phone-item">服务热线：<span>020-2805-0999</span></div>
+                    <div class="phone-item">招商热线：<span>020-2818-7591</span></div>
+                </div>
+                <div class="flex-wrap flex-y-center header-right">
+                    <template v-if="login">
+                        <!-- <a href="/cart/index" target="_blank" class="flex-wrap flex-y-center shopping-cart">
+                            <i class="icon-cart"></i>
+                            <div class="cart-text">购物车</div>
+                            <div v-if="data.cart_and_img.carts > 0" class="cart-num">{{data.cart_and_img.carts}}</div>
+                        </a> -->
+                        <Dropdown trigger="click" style="margin-left: 20px">
+                            <a class="user-name" href="javascript:void(0)">
+                                userData.username
+                                <i class="icon-bottom"></i>
+                            </a>
+                            <DropdownMenu slot="list">
+                                <a class=" user-go" href="#" target="_blank" >用户中心</a>
+                                <a class=" user-go" href="#" target="_blank" >我的订单</a>
+                                <a class="Logout user-go">退出</a>
+                            </DropdownMenu>
+                        </Dropdown>
+                    </template>
+                    <template v-else>
+                        <div class="register-btn" >注册</div>
+                        <div class="header-line"></div>
+                        <div class="login-btn" type="primary">您好，请登录</div>
+                    </template>
+                </div>
+            </div>
+            <br>
+        <button @click="loginsub">测试用button</button> 
+        </div>
+        <!-- 正文内容 -->
+        <div class="">
+
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">
+
+        </div>
+    </div>
+        <!-- 以下处理script内容 -->
+
+        <!-- 官网提供的Vue在线地址 -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- 官网提供的AXIOS在线地址 -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- 自己的JS -->
+        <script src=".\js\vue.min.js"></script>
+</body>
+</html>
