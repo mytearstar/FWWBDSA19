@@ -9,7 +9,7 @@
     <link href="https://www.rrzuji.com/zj_pc/v/layouts/main-sram-vue/index.css" rel="stylesheet">
     <link href="https://www.rrzuji.com/zj_pc/v/layouts/header-sram-vue/index.css" rel="stylesheet">
     <link href="https://www.rrzuji.com/zj_pc/v/layouts/footer-sram/index.css" rel="stylesheet">
-    <link href="https://www.rrzuji.com/js/iview/style/iview.css" rel="stylesheet">
+    <link href="https://unpkg.com/view-design/dist/styles/iview.css" rel="stylesheet">
     <link href="https://www.rrzuji.com/js/swiper5/swiper.min.css" rel="stylesheet">
     <link href="https://www.rrzuji.com/zj_pc/s/sram/sram-ui_c90ac28.css" rel="stylesheet">
 </head>
@@ -47,13 +47,13 @@
                                 userData.username
                                 <i class="icon-bottom"></i>
                             </a>
-                            <div class="ivu-select-dropdown" style="transform-origin: center top; position: absolute; will-change: top, left; top: 36px; left: 1277px;" x-placement="bottom">
+                            <!-- 注释掉后正常，原来没注释，不知为何<div class="ivu-select-dropdown" style="transform-origin: center top; position: absolute; will-change: top, left; top: 36px; left: 1277px;" x-placement="bottom"> -->
                                 <DropdownMenu slot="list">
                                     <a class=" user-go" href="#" target="_blank" >用户中心</a>
                                     <a class=" user-go" href="#" target="_blank" >我的订单</a>
                                     <a class="Logout user-go">退出</a>
                                 </DropdownMenu>
-                            </div>
+                            <!-- </div> -->
                         </Dropdown>
                     </template>
                     <template v-else>
@@ -83,5 +83,9 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <!-- 自己的JS -->
         <script src="js/vue.min.js"></script>
+        <!-- 自己的JS -->
+        <script src="js/iview.min.js"></script>
+        <!-- import iView -->
+        <script src="https://unpkg.com/view-design/dist/iview.min.js"></script>
 </body>
 </html>
